@@ -10021,22 +10021,43 @@ NAMES = [
     "Samir Zaman"
 ]
 
-# ম্যাসেজ তৈরি করার ফাংশন
+# User database
+USERS = []
+
+for index, name in enumerate(NAMES, start=1):
+    username = (
+        name.lower()
+        .replace(" ", "_")
+        .replace("-", "_")
+    )
+
+    # Add a unique suffix to avoid duplicate usernames
+    username = f"{username}{index}"
+
+    user_id = 1000000000 + index
+
+    USERS.append({
+        "name": name,
+        "username": f"@{username}",
+        "user_id": user_id
+    })
+
+
+# Create notification message
 def create_message():
-    name = random.choice(NAMES)
-    user_id = random.randint(1000000000, 9999999999)
+    user = random.choice(USERS)
     bot_username = random.choice(BOT_USERNAMES)
-    
-    message = f"""👑 NEW USER NOTIFICATION 👑
-━━━━━━━•❅•°•❈•°•❅•━━━━━━━
-➠ 👤 Name: {name}
+
+    message = f"""👑 DEMO USER NOTIFICATION 👑
+━━━━━━━━•❅•°•❈•°•❅•━━━━━━━━
+➠ 👤 Name: {user["name"]}
 ━━━━━━━━━━━━━━━━━━━━━━
-➠ 🧑‍💻 Username: Not Set
+➠ 🧑‍💻 Username: {user["username"]}
 ━━━━━━━━━━━━━━━━━━━━━━
-➠ 🆔 User ID: {user_id}
+➠ 🆔 User ID: {user["user_id"]}
 ━━━━━━━━━━━━━━━━━━━━━━
 ➠ 🤖 Bot: {bot_username}"""
-    
+
     return message
 
 # ম্যাসেজ পাঠানোর ফাংশন
