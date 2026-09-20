@@ -10072,8 +10072,8 @@ def send_messages():
         except Exception as e:
             print(f"[✗] এরর: {e}")
         
-        # র‍্যান্ডম সময় অপেক্ষা করবে (৫ থেকে ১৫ সেকেন্ড)
-        wait_time = random.randint(30, 60)
+        # র‍্যান্ডম সময় অপেক্ষা করবে (৬০ থেকে ২৪০ সেকেন্ড)
+        wait_time = random.randint(60, 240)
         print(f"[*] {wait_time} সেকেন্ড অপেক্ষা...")
         time.sleep(wait_time)
 
