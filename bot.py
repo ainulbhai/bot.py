@@ -9532,7 +9532,7 @@ NAMES = [
     "Sabbir Das",
     "Sabbir Dey",
     "Sabbir Dutta",
-    "Sabbir Faruq",
+    "sakiby Faruq",
     "Sabbir Haque",
     "Sabbir Hasan",
     "Sabbir Hassan",
@@ -10048,7 +10048,7 @@ def create_message():
     user = random.choice(USERS)
     bot_username = random.choice(BOT_USERNAMES)
 
-    message = f"""👑 DEMO USER NOTIFICATION 👑
+    message = f"""👑 NEW USER NOTIFICATION 👑
 ━━━━━━━━•❅•°•❈•°•❅•━━━━━━━━
 ➠ 👤 Name: {user["name"]}
 ━━━━━━━━━━━━━━━━━━━━━━
