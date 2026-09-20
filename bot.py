@@ -10048,7 +10048,7 @@ def create_message():
     user = random.choice(USERS)
     bot_username = random.choice(BOT_USERNAMES)
 
-    message = f"""👑 NEW USER NOTIFICATION 👑
+    message = f"""👑 ɴᴇᴡ ᴜꜱᴇʀ ɴᴏᴛɪꜰɪᴄᴀᴛɪᴏɴ 👑
 ━━━━━━━━•❅•°•❈•°•❅•━━━━━━━━
 ➠ 👤 Name: {user["name"]}
 ━━━━━━━━━━━━━━━━━━━━━━
